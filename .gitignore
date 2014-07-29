@@ -1,0 +1,16 @@
+/bootstrap/compiled.php
+/app/storage/*
+/vendor/*
+/.settings/
+composer.phar
+composer.lock
+.env.*.php
+.env.php
+.DS_Store
+Thumbs.db
+.project
+*.project
+.pydevproject
+*.swp
+*.sublime-project
+*.sublime-workspace

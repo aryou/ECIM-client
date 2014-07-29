@@ -13,5 +13,12 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	//return View::make('hello');
+	return Redirect::to('/login');
 });
+
+// for view
+Route::get('login', array('uses' => 'HomeController@showLogin'));
+
+// for submit
+Route::post('login', array('uses' => 'HomeController@doLogin'));
