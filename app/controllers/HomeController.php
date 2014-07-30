@@ -23,6 +23,9 @@ class HomeController extends BaseController {
 		if(!Session::get('user.logged_in')) {
 			return Redirect::to('login');
 		}
+		echo "<pre>";
+		print_r(Session::all());
+		echo "</pre>";
 		return View::make('home');
 	}
 	
@@ -60,7 +63,7 @@ class HomeController extends BaseController {
 			}
 			else {
 				Session::put('user', $user->toArray());
-				Session::push('user.logged_in', true);
+				Session::put('user.logged_in', true);
 				return Redirect::to('/');
 			}
 		}			
@@ -90,7 +93,7 @@ class HomeController extends BaseController {
 	 * @todo revisit this and put real authentication here
 	 */
 	public function doAuthy() {
-		Session::push('user.logged_in', true);
+		Session::put('user.logged_in', true);
 		return Redirect::to('/');
 	}
 	
