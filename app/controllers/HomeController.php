@@ -23,9 +23,6 @@ class HomeController extends BaseController {
 		if(!Session::get('user.logged_in')) {
 			return Redirect::to('login');
 		}
-		echo "<pre>";
-		print_r(Session::all());
-		echo "</pre>";
 		return View::make('home');
 	}
 	
