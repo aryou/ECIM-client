@@ -5,7 +5,7 @@
 		
 		<!-- if there are login errors, show them here -->
 		<p>
-			{{ $errors->first('email') }}
+			{{ $errors->first('username') }}
 			{{ $errors->first('password') }}
 		</p>
 		<table>

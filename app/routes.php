@@ -11,14 +11,15 @@
 |
 */
 
-Route::get('/', function()
-{
-	//return View::make('hello');
-	return Redirect::to('/login');
-});
+Route::get('/', array('uses' => 'HomeController@showHome'));
 
 // for view
 Route::get('login', array('uses' => 'HomeController@showLogin'));
-
 // for submit
 Route::post('login', array('uses' => 'HomeController@doLogin'));
+
+Route::get('authy', array('uses' => 'HomeController@showAuthy'));
+
+Route::post('authy', array('uses' => 'HomeController@doAuthy'));
+
+Route::get('logout', array('uses' => 'HomeController@doLogout'));

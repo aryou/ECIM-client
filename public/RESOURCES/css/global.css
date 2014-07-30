@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+header, main, footer, section { display:block; }
+.left { float:left; }
+.right { float:right; }
+.clear { clear:both; }
+main { width:100%; height:100%; }
+section#content { margin:0 auto; background-color:#efefef; width:1000px; }
