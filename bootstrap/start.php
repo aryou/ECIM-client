@@ -26,8 +26,10 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('homestead'),
-
+	'local' 		=> array('*.local'),
+	'dev'			=> array('*.dev.*'),
+	'test'		=> array('*test*'),
+	//'production'	no production set yet
 ));
 
 /*
