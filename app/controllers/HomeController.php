@@ -38,6 +38,7 @@ class HomeController extends BaseController {
 
 	/**
 	 * Process the login form
+	 * @todo use Auth\ldap once DA server is up
 	 */
 	public function doLogin() {
 		$rules = array(
